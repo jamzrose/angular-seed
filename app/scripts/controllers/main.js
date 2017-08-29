@@ -7,7 +7,7 @@
 * # MainCtrl
 * Controller of the movieMainiaApp
 */
-angular.module('MovieManiaApp')
+angular.module('movieManiaApp')
  .controller('MainCtrl', funtion ($scope) {
- 	$scope.ttitle = 'Thank you for following this course';
+ 	$scope.title = 'Thank you for following this course';
  });
