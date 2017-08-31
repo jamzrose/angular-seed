@@ -1,16 +1,29 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('movieManiaApp', [
-  'ngAnimate',
-  'ngCookies',
-  'ngResources',
-  'ngRoute'
-  'ngSanitize'
-  'ngTough'
-])
-.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+/**
+ * @ngdoc overview
+ * @name moviemaniaApp
+ * @description
+ * # moviemaniaApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('moviemaniaApp', [
+    'ngRoute',
+    'ngSanitize'
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
