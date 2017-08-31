@@ -10,8 +10,12 @@
  */
 angular
   .module('moviemaniaApp', [
-    'ngRoute',
-    'ngSanitize'
+  	'ngAnimate',
+  	'ngCookies',
+  	'ngResouces'
+    	'ngRoute',
+    	'ngSanitize',
+    	'ngTough'
   ])
   .config(function ($routeProvider) {
     $routeProvider
